@@ -16,8 +16,15 @@ public class BaseBallGame {
         opponent.throwBall();
 
         do {
-            System.out.print("숫자를 입력하세요 : ");
-            hitter.hitBall();
+            try {
+
+                System.out.print("숫자를 입력하세요 : ");
+                hitter.hitBall();
+
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+                break;
+            }
         } while (!computeScore());
     }
 
