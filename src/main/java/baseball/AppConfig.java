@@ -1,7 +1,7 @@
 package baseball;
 
 public class AppConfig {
-    public BaseBallGame of() {
+    public BaseBallGame initBaseBallGame() {
         Opponent opponent = new Opponent();
         Hitter hitter = new Hitter();
 
