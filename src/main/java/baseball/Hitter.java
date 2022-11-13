@@ -19,7 +19,6 @@ public class Hitter {
 
         StringTokenizer st = new StringTokenizer(Console.readLine());
         String input = st.nextToken();
-
         validate(input);
 
         for (Character c : input.toCharArray()) {
@@ -65,7 +64,9 @@ public class Hitter {
      */
     private boolean isDuplicated(String input) {
         for(int i=0; i<input.length(); i++) {
-            if (input.indexOf(input.charAt(i)) == i) return true;
+            for (int j = 0; j < input.length(); j++) {
+                if(input.charAt(i) == input.charAt(j) && i != j) return true;
+            }
         }
         return false;
     }
